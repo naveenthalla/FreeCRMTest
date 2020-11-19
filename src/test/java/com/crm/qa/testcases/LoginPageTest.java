@@ -32,7 +32,7 @@ public class LoginPageTest extends TestBase {
   @Test(priority = 1)
 	public void loginPageTitleTest() {
 		String title=loginPage.validateLoginPageTitle();
-		Assert.assertEquals(title, "NaveenNewCRMPRO - CRM software for customer relationship management, sales, and support.");
+		Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support.");
 	}
 	@Test(priority = 2)
 	public void crmLogoImageTest() {
