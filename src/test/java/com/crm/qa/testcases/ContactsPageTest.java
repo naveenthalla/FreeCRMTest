@@ -1,8 +1,11 @@
 package com.crm.qa.testcases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
@@ -53,6 +56,19 @@ public class ContactsPageTest extends TestBase {
 		System.out.println("clicked on checkbox");
 	}
 	
+	@DataProvider
+	public void getTestData() {
+		
+	}
+	
+	@Test(priority = 4)
+	
+	public void validateCreateNewContact() {
+		homePage.clickOnNewContactLink();
+		
+		contactsPage.createNewContact("Mr.","John", "M", "AWS");
+	
+	}
 	
 	@AfterMethod
 	public void tearDown() {
